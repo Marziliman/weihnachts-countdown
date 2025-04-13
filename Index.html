@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="de"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Wie viele Tage bis Weihnachten?&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Finde heraus, wie viele Tage es noch bis Weihnachten sind. Täglicher Countdown – einfach, schnell und ohne Schnickschnack!"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Comic Sans MS', cursive, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #014421;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.lang-select button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 5px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #014421;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.main {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-grow: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>-webkit-background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>-webkit-text-fill-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-fill-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>#countdown {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 3rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #8B0000;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #cfcfcf;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.snowflake {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: -10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 9999;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>pointer-events: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: fall linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fall {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: translateY(-5vh) rotate(0deg); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: translateY(110vh) rotate(360deg); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.share-buttons a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="lang-select"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="setLanguage('de')"&gt;🇩🇪 Deutsch&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="setLanguage('en')"&gt;🇬🇧 English&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="setLanguage('fr')"&gt;🇫🇷 Français&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="setLanguage('it')"&gt;🇮🇹 Italiano&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="setLanguage('sv')"&gt;🇸🇪 Svenska&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="main"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 id="headline"&gt;Wie viele Tage bis Weihnachten?&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="countdown"&gt;Lade...&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="share-buttons"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" onclick="share('facebook')"&gt;📘&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" onclick="share('twitter')"&gt;🐦&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#" onclick="share('whatsapp')"&gt;💬&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer" id="footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Powered by deinem absurden Wunsch nach Weihnachtswahrheit 🎄</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const translations = {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>de: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headline: "Wie viele Tage bis Weihnachten?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer: "Powered by deinem absurden Wunsch nach Weihnachtswahrheit 🎄",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>days: "Tage"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>en: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headline: "How many days until Christmas?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer: "Powered by your ridiculous need for Christmas clarity 🎄",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>days: "days"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>fr: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headline: "Combien de jours jusqu'à Noël ?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer: "Propulsé par ton besoin absurde de vérité de Noël 🎄",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>days: "jours"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>it: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headline: "Quanti giorni a Natale?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer: "Alimentato dal tuo assurdo desiderio di verità natalizia 🎄",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>days: "giorni"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>sv: {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headline: "Hur många dagar till jul?",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>footer: "Drivs av din absurda längtan efter julens sanning 🎄",</p>
+<p class="p1"><span class="Apple-converted-space">        </span>days: "dagar"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>let currentLang = 'de';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function setLanguage(lang) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>currentLang = lang;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const t = translations[lang];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("headline").textContent = t.headline;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("footer").textContent = t.footer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>updateCountdown();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calculateDaysUntilChristmas() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const year = now.getFullYear();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let christmas = new Date(year, 11, 25);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (now &gt; christmas) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>christmas = new Date(year + 1, 11, 25);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const diffTime = christmas - now;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return Math.ceil(diffTime / (1000 * 60 * 60 * 24));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function updateCountdown() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const days = calculateDaysUntilChristmas();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const label = translations[currentLang].days;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("countdown").textContent = `${days} ${label}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function createSnowflakes() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (let i = 0; i &lt; 500; i++) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const snowflake = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>snowflake.classList.add("snowflake");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>snowflake.style.left = Math.random() * window.innerWidth + "px";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>snowflake.style.animationDuration = 5 + Math.random() * 5 + "s";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>snowflake.style.fontSize = (0.5 + Math.random() * 1.5) + "em";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>snowflake.style.animationDelay = (Math.random() * 10) + "s";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>snowflake.textContent = "❄";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.body.appendChild(snowflake);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function share(platform) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const url = encodeURIComponent(window.location.href);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const text = encodeURIComponent(document.getElementById("headline").textContent);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (platform === 'facebook') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (platform === 'twitter') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.open(`https://twitter.com/intent/tweet?text=${text}&amp;url=${url}`, '_blank');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (platform === 'whatsapp') {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setLanguage('de');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>createSnowflakes();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
